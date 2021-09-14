@@ -70,17 +70,14 @@ export default {
       this.sending = true;
       try {
         const response = await this.post({
-          message: value,
+          message: this.value,
         });
-        this.$parent.active_period_messages.push({
-          message: value,
-        });
+        this.$parent.messages.push(response.data);
       } catch (e) {
         console.error(e);
       } finally {
         this.sending = false;
       }
-      console.log("sending...");
     },
     post(data) {
       return new Promise((resolve, reject) => {
