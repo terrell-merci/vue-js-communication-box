@@ -1,7 +1,7 @@
 # vue-js-communication-box
 Demo of the communication box programmed with Vue JS for Docket TMLS application. Code is reactive, organized, and maintainable.
 
-To init, the `index.vue` component makes an Http get request to the backend, retrieving a json of all messages that belong to the selected 'trip'. This data is then set to the `messages` property, defined in the data hook. `this.messages` is then passed to child component `./MessagesSection.vue` which iterates through the array, sending each to `inc/message.vue` sub-component for final processing before display.
+To init, the `index.vue` component makes an HTTP GET request to the backend, retrieving a json of all messages that belong to the selected 'trip'. This data is then set to the `messages` property, defined in the data hook. `this.messages` is then passed to child component `./MessagesSection.vue` which iterates through the array, sending each to `inc/message.vue` sub-component for final processing before display.
 
 ```javascript
 async getMessages(id) {
